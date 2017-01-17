@@ -1,0 +1,21 @@
+---
+ec2_server_security_desc: "my test security group"
+
+ec2_server_security_group: 'test_group' # server security group
+
+rules_external:
+    - proto: tcp
+      from_port: 22
+      to_port: 22
+      cidr_ip: "0.0.0.0/0"
+    - proto: tcp
+      from_port: 80
+      to_port: 80
+      cidr_ip: "0.0.0.0/0"
+
+rules_external_eg:
+     - proto: tcp
+       from_port: 22
+       to_port: 22
+       cidr_ip: "0.0.0.0/0"
+

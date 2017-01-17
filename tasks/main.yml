@@ -1,0 +1,6 @@
+---
+- include: security_group.yml #create a security group (optional)
+
+- include: launch_ec2.yml # launch the server
+
+- include: add_server.yml # add to ansible hosts

@@ -1,0 +1,17 @@
+galaxy_info:
+  author: pablo Bullian
+  description: Create a security group and EC2 Servers
+  company: 
+
+  license: GPLv2 
+
+  min_ansible_version: 1.2
+
+  platforms:
+  - name: All
+
+  galaxy_tags: 
+    - ec2
+    - aws
+    - cloud
+dependencies: [] 

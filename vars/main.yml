@@ -1,0 +1,22 @@
+---
+  ec2_server_instcount: 1 # quantity of servers to create
+  ec2_server_instance_type: 't2.micro' # size of the instance, see: https://aws.amazon.com/ec2/instance-types/
+  ec2_server_image: 'ami-7de77b11'  # AMI image id, see: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html
+  ec2_server_ansible_ssh_user: 'gkid' # 
+  ec2_server_region: 'sa-east-1' # location, see: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html 
+  ec2_server_pem_path: '' 
+  ec2_server_group_name: 'ec2_server_hosts' # set group name, see: http://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-are-resource-groups.html
+   
+  ec2_server_keypair: 'gkid' # key pair id, see: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+  ec2_server_access_key: '{{ lookup("env","AWS_ACCESS_KEY") }}' # export AWS_ACCESS_KEY="XXXXXXXXXXX"
+  ec2_server_secret_key: '{{ lookup("env","AWS_SECRET_KEY") }}' # export AWS_SECRET_KEY="XXXXXXXXXXXXXXXXXXXX"
+  ec2_server_name: 'test01' # server name
+
+
+  required_vars:
+   - ec2_server_access_key
+   - ec2_server_secret_key
+   - ec2_server_name
+   - ec2_server_image
+   - ec2_server_ansible_ssh_user
+   - ec2_server_region

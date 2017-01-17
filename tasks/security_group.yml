@@ -1,0 +1,12 @@
+- name: include variables
+  include_vars: security_group.yml
+
+- name: Create a security group
+  local_action: 
+       module: ec2_group
+       name: "{{ ec2_server_security_group }}"
+       description: "{{ ec2_server_security_desc }}"
+       region: "{{ ec2_server_region }}"
+       rules: "{{ rules_external }}"
+       rules_egress: "{{ rules_external_eg }}"
+  register: firewall_rules
