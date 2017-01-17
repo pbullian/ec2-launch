@@ -3,7 +3,7 @@ galaxy_info:
   description: Create a security group and EC2 Servers
   company: 
 
-  license: GPLv2 
+  license: GPLv3
 
   min_ansible_version: 1.2
 
